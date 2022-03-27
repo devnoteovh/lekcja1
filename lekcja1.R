@@ -11,7 +11,7 @@ library(httr)
 library(jsonlite)
 #require(httr)
 
-endpoint <- "https://api.openweathermap.org/data/2.5/weather?q=Warszawa&appid=1765994b51ed366c506d5dc0d0b07b77&units=metric"
+endpoint <- "https://api.openweathermap.org/data/2.5/weather?q=Warszawa&appid=xxx&units=metric"
 #httr::GET
 getWeather<- GET(endpoint)
 weatherText<- content(getWeather,"text")
@@ -72,4 +72,4 @@ zBazy<-dbFetch(res)
 dbClearResult(res)
 dbDisconnect(con)
 
-fromJSON("http://54.37.136.190:8000/row?id=10000000")
+fromJSON("http://xxx:8000/row?id=10000000")
